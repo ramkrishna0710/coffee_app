@@ -135,7 +135,7 @@ const HomeScreen = () => {
                                     imagelink_square={item.imagelink_square}
                                     special_ingredient={item.special_ingredient}
                                     average_rating={item.average_rating}
-                                    prices={item.prices[index]}
+                                    prices={item.prices}
                                     buttonPressHandler={()=>{}}
                                 />
                             </TouchableOpacity>

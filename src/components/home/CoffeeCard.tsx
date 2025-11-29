@@ -23,6 +23,7 @@ interface CoffeeCardProps {
 const CoffeeCard: FC<CoffeeCardProps> = ({
     id, index, name, roasted, imagelink_square, average_rating, prices, type, special_ingredient
 }) => {
+    console.log("Prices in CoffeeCard:", prices[1].price, "Name:", name);
     return (
         <LinearGradient
             start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}
@@ -39,10 +40,10 @@ const CoffeeCard: FC<CoffeeCardProps> = ({
                     <Text style={styles.ratingText}>{average_rating}</Text>
                 </View>
             </ImageBackground>
-            <Text>{name}</Text>
+            <Text style={{color: COLORS.primaryWhiteHex}}>{name}</Text>
             <Text>{special_ingredient}</Text>
             <View>
-                {/* <Text>$ <Text>{prices.price}</Text></Text> */}
+                <Text>$ <Text style={{color: COLORS.primaryWhiteHex}}>{prices.price}</Text></Text>
             </View>
 
             <TouchableOpacity
